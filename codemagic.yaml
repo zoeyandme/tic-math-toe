@@ -1,0 +1,5 @@
+workflows:
+  android:
+    name: Android Build
+    scripts:
+      - ./gradlew assembleDebug
