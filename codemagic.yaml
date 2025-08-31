@@ -1,8 +1,10 @@
 workflows:
-  android:
-    name: Android Build
+  android-workflow:
+    name: Build Android APK
+    environment:
+      sdk: 34
     scripts:
-      - chmod +x gradlew
-      - ./gradlew assembleDebug
+      - name: Build APK
+        script:  ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
