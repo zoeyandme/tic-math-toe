@@ -2,4 +2,5 @@ workflows:
   android:
     name: Android Build
     scripts:
+      - chmod +x gradlew
       - ./gradlew assembleDebug
