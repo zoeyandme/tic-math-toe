@@ -5,6 +5,6 @@ workflows:
       sdk: 34
     scripts:
       - name: Build APK
-        script:  ./gradlew assembleDebug
+        script: ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/**/*.apk
+      - app/build/outputs/apk/debug/*.apk
