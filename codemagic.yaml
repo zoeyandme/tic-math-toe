@@ -2,8 +2,7 @@ workflows:
   android-workflow:
     name: Build Android APK
     environment:
-      vars:
-        JAVA_HOME: /usr/lib/jvm/java-11-openjdk-amd64
+      java: 11
     scripts:
       - name: Build APK
         script: ./gradlew assembleDebug
