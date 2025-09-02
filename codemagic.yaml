@@ -2,6 +2,13 @@ workflows:
   android-workflow:
     name: Build Android APK
     environment:
-      java: 11
+      java: 17
+    scripts:
+      - name: Build APK
+        script: ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
+    publishing:
+      email:
+        recipients:
+          - zoeyandme.enterprises@gmail.com
