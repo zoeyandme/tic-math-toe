@@ -3,8 +3,5 @@ workflows:
     name: Build Android APK
     environment:
       java: 11
-    scripts:
-      - name: Build APK
-        script: ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/**/*.apk
