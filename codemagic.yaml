@@ -1,9 +1,6 @@
 workflows:
   android-workflow:
     name: Build Android APK
-    environment:
-      android:
-        image: latest
     scripts:
       - name: Make Gradle executable
         script: chmod +x ./gradlew
