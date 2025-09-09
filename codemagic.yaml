@@ -6,7 +6,12 @@ workflows:
         script: chmod +x ./gradlew
       - name: Build APK
         script: ./gradlew assembleDebug
-      - name: List files
-        script: ls -R app/build/outputs
+      - name: List outputs
+        script: |
+          ls -R app/build/outputs || true
+          ls -R build/outputs || true
+          find . -type f -name "*.apk" || true
     artifacts:
       - app/build/outputs/**/*.apk
+      - build/outputs/**/*.apk
+      - **/*.apk
