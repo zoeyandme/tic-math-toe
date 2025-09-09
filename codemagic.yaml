@@ -12,5 +12,4 @@ workflows:
           ls -R build/outputs || true
           find . -type f -name "*.apk" || true
     artifacts:
-      - "app/build/outputs/**/*.apk"
-      - "build/outputs/**/*.apk"
+      - "**/*.apk"
