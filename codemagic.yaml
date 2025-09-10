@@ -7,8 +7,8 @@ workflows:
       - name: Clean project
         script: ./gradlew clean
       - name: Build Debug APK
-        script: ./gradlew :app:assembleDebug
-      - name: List APK files
-        script: ls -R app/build/outputs/apk/ || true
+        script: ./gradlew assembleDebug
+      - name: List all APK files
+        script: find . -type f -name "*.apk" || true
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - "**/*.apk"
