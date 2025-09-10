@@ -4,9 +4,11 @@ workflows:
     scripts:
       - name: Make Gradle executable
         script: chmod +x ./gradlew
-      - name: Build APK
-        script: ./gradlew assembleDebug
+      - name: Clean project
+        script: ./gradlew clean
+      - name: Build Debug APK
+        script: ./gradlew :app:assembleDebug
       - name: List APK files
-        script: find . -name "*.apk" || true
+        script: ls -R app/build/outputs/apk/ || true
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
